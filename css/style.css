@@ -1,0 +1,235 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "kamerik-3d";
+  font-display: swap;
+  src: url("../fonts/kamerik205-heavy.woff2") format("woff2"), url("../fonts/kamerik205-heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "merriweather-3d";
+  font-display: swap;
+  src: url("../fonts/merriweather-regular-italic.woff2") format("woff2"), url("../fonts/merriweather-regular-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #fff;
+  line-height: 1;
+  font-family: kamerik-3d;
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: kamerik-3d;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #0e101a;
+  font-weight: 900;
+}
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: calc(51% - (1vw + 1vh) * 7.8 / 2);
+  top: calc(50% - (1vw + 1vh) * 7.8 * 1.75);
+  z-index: 1;
+  width: calc((1vw + 1vh) * 7.8);
+  height: calc((1vw + 1vh) * 7.8);
+}
+
+.layers {
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.layers__container {
+  height: 100vh;
+  min-height: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.layers__item {
+  position: absolute;
+  inset: -5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s;
+  transition: -webkit-transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s;
+  -o-transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s;
+  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s;
+  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s, -webkit-transform 1.5s cubic-bezier(0.05, 0.5, 0, 1) 0s;
+}
+.layers__item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.layers__item:nth-child(4), .layers__item:nth-child(5), .layers__item:nth-child(6) {
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  margin-top: calc((1vw + 1vh) * 6);
+  font-size: calc((1vw + 1vh) * 4.3);
+  line-height: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: calc((1vw + 1vh) * -0.15);
+}
+.hero-content span {
+  display: block;
+}
+.hero-content__subtitle {
+  font-family: merriweather-3d;
+  font-weight: 400;
+  font-size: calc((1vw + 1vh) * 0.78);
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 3;
+}
+.hero-content__button {
+  margin-top: calc((1vw + 1vh) * 2.5);
+  padding: calc((1vw + 1vh) * 0.7) calc((1vw + 1vh) * 1.25);
+  border: rgba(255, 255, 255, 0.4) 3px solid;
+  border-radius: 10em;
+  font-family: Arial;
+  font-weight: 600;
+  font-size: calc((1vw + 1vh) * 0.71);
+  text-transform: uppercase;
+  letter-spacing: -0.02vw;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forest Parallax</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="page">
+
+      <div class="logo">
+        <img src="img/logo.svg" alt="">
+      </div>
+
+      <section class="layers">
+        <div class="layers__container">
+
+          <div data-prlx-z="-55" data-prlx-scale="1.06" class="layers__item">
+            <img src="img/layer-1.jpg" alt="">
+          </div>
+          <div data-prlx-z="80" data-prlx-scale="0.88" class="layers__item">
+            <img src="img/layer-2.png" alt="">
+          </div>
+          <div data-prlx-z="180" data-prlx-scale="0.8" class="layers__item">
+            <div class="hero-content">
+              <h1 class="hero-content__title">Natural Forest <span>HTML / CSS</span></h1>
+              <div class="hero-content__subtitle">Creating a beautiful 3D website with a "lens effect"</div>
+              <button class="hero-content__button button button-start">Click on the button</button>
+            </div>
+          </div>
+          <div data-prlx-z="190" data-prlx-scale="0.9" class="layers__item">
+            <canvas class="rain"></canvas>
+          </div>
+          <div data-prlx-z="300" data-prlx-scale="0.9" class="layers__item">
+            <img src="img/layer-5.png" alt="">
+          </div>
+          <div data-prlx-z="380" class="layers__item">
+            <img src="img/layer-6.png" alt="">
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/libs/rain.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+// Заголовки, общие БЄМ блоки и проче...
+.logo {
+  $logoSize: calc($index * 7.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: calc(51% - calc($logoSize / 2));
+  top: calc(50% - $logoSize * 1.75);
+  z-index: 1;
+  // transform: translate(-50%, -50%);
+  width: $logoSize;
+  height: $logoSize;
+}
+
+.button {
+}
+
+.button-start {
+}
+
+.rain {
+}
